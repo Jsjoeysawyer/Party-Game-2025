@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wicked Willow: Final Curse</title>
+  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="description" content="Solve the five challenges, complete the group ritual, and break Wicked Willow's curse." />
+  <!-- Creepy Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=IM+Fell+English:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="noise"></div>
+  <div id="webs"></div>
+
+  <header class="topbar">
+    <h1 class="logo">Wicked Willow</h1>
+    <p class="tag">Final Curse • Haunted Ghost Town</p>
+  </header>
+
+  <nav class="tabs">
+    <button data-view="home" class="active">Home</button>
+    <button data-view="map">Challenges</button>
+    <button data-view="gallery">Gallery</button>
+    <button data-view="ritual">Group Ritual</button>
+    <button data-view="about">About</button>
+  </nav>
+
+  <main id="view-home" class="view active">
+    <section class="card glow">
+      <h2>Welcome, Traveler</h2>
+      <p>Roam the party, scan QR codes, and solve <strong>five challenges</strong>. Complete the <strong>Group Ritual</strong> to earn a bonus hint. When you’ve gathered all clue-words, enter the final spell to end the curse.</p>
+      <ul class="bullets">
+        <li>Works offline after one load (PWA).</li>
+        <li>Progress saves on this device.</li>
+        <li>Scan QR links like <code>#?station=2</code> to jump to a challenge.</li>
+      </ul>
+      <button id="btn-start" class="btn btn-primary">Begin</button>
+      <div class="quick-links">
+        <a class="chip" href="#?station=1">Challenge 1</a>
+        <a class="chip" href="#?station=2">Challenge 2</a>
+        <a class="chip" href="#?station=3">Challenge 3</a>
+        <a class="chip" href="#?station=4">Challenge 4</a>
+        <a class="chip" href="#?station=5">Final Spell</a>
+      </div>
+    </section>
+  </main>
+
+  <main id="view-map" class="view">
+    <section class="card">
+      <h2>Challenges</h2>
+      <div id="station-list" class="list"></div>
+    </section>
+  </main>
+
+  <main id="view-gallery" class="view">
+    <section class="card">
+      <h2>Gallery</h2>
+      <p>Scenes unlock as you progress.</p>
+      <div id="gallery-list" class="grid"></div>
+    </section>
+  </main>
+
+  <main id="view-ritual" class="view">
+    <section class="card">
+      <h2>Group Ritual</h2>
+      <p>Gather nearby friends. Tap <em>Start</em> and clap/cheer — your device listens and fills the meter. At 100%, you earn a <strong>bonus hint</strong> on your next challenge.</p>
+      <div class="meter"><div id="meter-fill"></div></div>
+      <div class="controls">
+        <button id="ritual-start" class="btn">Start</button>
+        <button id="ritual-stop" class="btn" disabled>Stop</button>
+      </div>
+      <p id="ritual-status" class="muted"></p>
+    </section>
+  </main>
+
+  <main id="view-about" class="view">
+    <section class="card">
+      <h2>About</h2>
+      <p>Theme: Wicked Willow &amp; the Haunted Ghost Town. This lightweight web app (PWA) supports QR deep links and offline play. Customize puzzles in <code>content.json</code>.</p>
+      <ul class="bullets">
+        <li>QR pattern: <code>.../index.html#?station=1</code> to <code>5</code></li>
+        <li>To refresh cached assets, bump the cache name in <code>service-worker.js</code>.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" id="modal-close" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
