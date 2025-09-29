@@ -1,0 +1,74 @@
+{
+  "stations": [
+    {
+      "id": "1",
+      "title": "Town Gates — The Word Lock",
+      "thumb": "Gates",
+      "type": "input",
+      "story": "The gate is sealed. An iron sign reads: “I am taken from a mine, locked up in a wooden case, never released unless I am struck.” What am I?",
+      "accept": ["coal", "pencil lead", "graphite"],
+      "hint": "Found in a mine. Also inside pencils."
+    },
+    {
+      "id": "2",
+      "title": "Tavern of Whispers — The Harvest Name",
+      "thumb": "Tavern",
+      "type": "input",
+      "story": "A tattered tavern menu flickers by lantern light. Only letters remain: S  A  _  O  N. The barkeep rasps, “It’s the month of harvest… the night Willow chose.”",
+      "accept": ["samhain"],
+      "hint": "Ancient Celtic festival on Oct 31."
+    },
+    {
+      "id": "3",
+      "title": "Cavern of Spells — The Anagram",
+      "thumb": "Cavern",
+      "type": "anagram",
+      "story": "Scrawled in red: EVIL NOW DWELLS. Rearrange the letters to reveal what Willow bound this cavern with.",
+      "accept": ["willows end", "willowsend", "willow send"],
+      "hint": "Two words. Possessive without the apostrophe."
+    },
+    {
+      "id": "4",
+      "title": "Cabin of the Head — The Riddle",
+      "thumb": "Cabin",
+      "type": "input",
+      "story": "The Mayor’s severed head speaks: “I am always hungry, I must always be fed. The finger I touch will soon turn red.” What am I?",
+      "accept": ["fire", "flame"],
+      "hint": "It devours wood."
+    },
+    {
+      "id": "5",
+      "title": "The Final Spell — Break the Curse",
+      "thumb": "Spell",
+      "type": "input",
+      "story": "Gather the clue-words from prior stops. Speak the full chant to end the curse.",
+      "accept": [
+        "by ash and bone, we end her throne.",
+        "by ash and bone we end her throne",
+        "by ash and bone we end her throne.",
+        "by ash and bone, we end her throne"
+      ],
+      "hint": "Ash • bone • end • throne."
+    }
+  ],
+  "gallery": [
+    {
+      "title": "Spiders Scatter",
+      "lockedMedia": "https://dummyimage.com/800x450/0e0e0e/777.png&text=Locked",
+      "unlockedMedia": "https://dummyimage.com/800x450/1a1a1a/cf0.png&text=Spiders+Scatter",
+      "unlockStation": "2"
+    },
+    {
+      "title": "Cavern Glyphs Glow",
+      "lockedMedia": "https://dummyimage.com/800x450/0e0e0e/777.png&text=Locked",
+      "unlockedMedia": "https://dummyimage.com/800x450/1a1a1a/cf0.png&text=Cavern+Glyphs+Glow",
+      "unlockStation": "3"
+    },
+    {
+      "title": "Head Falls Silent",
+      "lockedMedia": "https://dummyimage.com/800x450/0e0e0e/777.png&text=Locked",
+      "unlockedMedia": "https://dummyimage.com/800x450/1a1a1a/cf0.png&text=Head+Falls+Silent",
+      "unlockStation": "5"
+    }
+  ]
+}
